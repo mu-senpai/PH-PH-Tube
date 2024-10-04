@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .active{
+            background-color: #FF1F3D;
+            color: white;
+        }
+    </style>
+
+    <title>PH Tube</title>
+</head>
+<body>
+    <header class="max-w-[95%] lg::max-w-[90%] mx-auto border-b border-[#17171733] py-4 sm:py-3">
+        <div class="navbar bg-base-100 mb-2 sm:mb-0">
+            <div class="navbar-start">
+              <a href="#" class="text-xl font-bold">
+                <img class="h-7 lg:h-9" src="ph-tube-resources/Logo.png" alt="">
+              </a>
+            </div>
+            <div class="navbar-center hidden sm:flex sm:gap-3">
+                <label class=" input input-bordered flex items-center gap-2">
+                    <input id="search-input" type="text" class="grow" placeholder="Search" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      class="h-4 w-4 opacity-70">
+                      <path
+                        fill-rule="evenodd"
+                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </label>
+            </div>
+            <div class="navbar-end">
+              <a class="btn btn-sm text-white bg-[#FF1F3D]">Sort</a>
+            </div>
+        </div>
+        <div class="w-[95%] mx-auto flex gap-3 items-center sm:hidden">
+            <label class="w-full input input-bordered flex items-center gap-2">
+                <input id="search-input-mob" type="text" class="grow" placeholder="Search" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  class="h-4 w-4 opacity-70">
+                  <path
+                    fill-rule="evenodd"
+                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </label>
+        </div>
+    </header>
+
+    <main class="max-w-[95%] lg::max-w-[90%] mx-auto">
+        <section id="categories" class="w-full mx-auto flex justify-center gap-3 py-5 sm:py-6 lg:py-7">
+            <button id="btn-all" onclick="loadVideos()" class="btn category-btn btn-sm bg-[#25252526] text-[#252525B3]">All</button>
+        </section>
+        <section id="videos" class="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pb-7 sm:pb-9 lg:pb-10"></section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
